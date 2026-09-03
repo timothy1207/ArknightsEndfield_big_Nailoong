@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bbj5ivcsy45hd"]
+
+[ext_resource type="Script" uid="uid://cvwhhchfpfa1x" path="res://fruit/rigid_body_2d.gd" id="1_tjxl6"]
+[ext_resource type="Shader" uid="uid://dysf2xqyfjc88" path="res://fruit/fruit.gdshader" id="2_ve554"]
+[ext_resource type="Texture2D" uid="uid://bdqn1ysdhnht" path="res://images/_1.png" id="2_yxtga"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yxtga"]
+radius = 20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ea1b1"]
+shader = ExtResource("2_ve554")
+shader_parameter/light_position = Vector2(-0.35, -0.45)
+shader_parameter/light_strength = 0.5
+shader_parameter/shadow_strength = 0.2
+shader_parameter/specular_strength = 0.08
+
+[node name="fruit" type="RigidBody2D" unique_id=768182110]
+script = ExtResource("1_tjxl6")
+sprite_size = 1.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=686192215]
+shape = SubResource("CircleShape2D_yxtga")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2003026923]
+material = SubResource("ShaderMaterial_ea1b1")
+position = Vector2(-2.3841858e-07, 0)
+scale = Vector2(0.10757375, 0.10623327)
+texture = ExtResource("2_yxtga")

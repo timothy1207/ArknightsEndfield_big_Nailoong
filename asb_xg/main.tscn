@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://dmuo0rmc68osp"]
+
+[ext_resource type="Script" uid="uid://bbpccyoefraro" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bhfv08kqa6evx" path="res://images/屏幕截图 2026-08-31 221649.png" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://cfpsc5bb45k4y" path="res://Montserrat-Black_爱给网_aigei_com.ttf" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bib2xvfsn1wj2" path="res://images/e0420e64-be42-4bf9-ab9a-55e54c300d49.png" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cb1yj0vs2ht34" path="res://images/72ee331d-ecfb-4a8e-aac5-973e9bfce4e5.png" id="3_lquwl"]
+[ext_resource type="AudioStream" uid="uid://cmaufyly0kumf" path="res://sound/铁痕电台-MSR&Mike Truman&Lottie Truman - 协议流.mp3" id="6_7mycd"]
+[ext_resource type="AudioStream" uid="uid://defnsm42pm8n4" path="res://sound/扔下钱袋子_爱给网_aigei_com.mp3" id="7_4c57u"]
+[ext_resource type="Texture2D" uid="uid://dwesqqw85vqym" path="res://images/b5956a68-7539-4bfc-9e94-d8bad70efbc9.png" id="7_5vw27"]
+[ext_resource type="Texture2D" uid="uid://cry054sf77wgc" path="res://images/d902cee1-50d2-462e-b810-c46def1a05e0.png" id="7_272bh"]
+[ext_resource type="AudioStream" uid="uid://4ioc528u2fnc" path="res://sound/音效 (1).mp3" id="8_efxa6"]
+[ext_resource type="AudioStream" uid="uid://k45you20rif5" path="res://sound/游戏结束_爱给网_aigei_com.mp3" id="11_efxa6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
+size = Vector2(67, 786)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+size = Vector2(64, 788.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(788, 42)
+
+[node name="main" type="Node2D" unique_id=1604071436]
+script = ExtResource("1_ig7tw")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1222365638]
+
+[node name="gamearea" type="Node2D" parent="Node2D" unique_id=1372712379]
+
+[node name="L" type="StaticBody2D" parent="Node2D/gamearea" unique_id=759512908]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/gamearea/L" unique_id=1285891658]
+position = Vector2(85.5, 664)
+shape = SubResource("RectangleShape2D_7dm0k")
+
+[node name="R" type="StaticBody2D" parent="Node2D/gamearea" unique_id=207864399]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/gamearea/R" unique_id=605244693]
+position = Vector2(875, 657.25)
+shape = SubResource("RectangleShape2D_ig7tw")
+
+[node name="B" type="StaticBody2D" parent="Node2D/gamearea" unique_id=1479652473]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/gamearea/B" unique_id=2145130140]
+position = Vector2(480, 1070)
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="fruits" type="Node2D" parent="Node2D" unique_id=2092573875]
+
+[node name="UI" type="CanvasLayer" parent="Node2D" unique_id=1007706866]
+
+[node name="scorelabel" type="Label" parent="Node2D/UI" unique_id=121057630]
+offset_left = 973.0
+offset_top = 244.0
+offset_right = 1191.0
+offset_bottom = 294.0
+theme_override_fonts/font = ExtResource("2_1bvp3")
+theme_override_font_sizes/font_size = 40
+text = "123"
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/UI/scorelabel" unique_id=1579407872]
+z_index = -1
+position = Vector2(211.5, 29.000011)
+scale = Vector2(0.20672187, 0.2209945)
+texture = ExtResource("3_lquwl")
+
+[node name="nextlabel" type="Label" parent="Node2D/UI" unique_id=876680451]
+offset_left = 978.0
+offset_top = 108.0
+offset_right = 1194.0
+offset_bottom = 158.0
+theme_override_fonts/font = ExtResource("2_1bvp3")
+theme_override_font_sizes/font_size = 40
+text = "123"
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/UI/nextlabel" unique_id=1876667942]
+z_index = -1
+position = Vector2(211.50002, 29.500008)
+scale = Vector2(0.2067219, 0.21961325)
+texture = ExtResource("3_lquwl")
+
+[node name="gameover" type="Control" parent="Node2D/UI" unique_id=822438066]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Node2D/UI/gameover" unique_id=1965858369]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 348.0
+offset_right = 1228.0
+offset_bottom = 539.0
+theme_override_fonts/font = ExtResource("2_1bvp3")
+theme_override_font_sizes/font_size = 128
+text = "gameover"
+
+[node name="Label" type="Label" parent="Node2D/UI/gameover/Label" unique_id=1433063023]
+z_index = -1
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 813.0
+offset_bottom = 199.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1bvp3")
+theme_override_font_sizes/font_size = 128
+text = "gameover"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=315170085]
+z_index = -1
+position = Vector2(840.9999, 522.875)
+scale = Vector2(0.7775735, 0.76672727)
+texture = ExtResource("2_0xm2m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=275850101]
+position = Vector2(-947.9138, 208.85757)
+scale = Vector2(0.5393084, 0.5397749)
+texture = ExtResource("3_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=191810389]
+position = Vector2(25.72113, 197.10397)
+scale = Vector2(0.535386, 0.53443384)
+texture = ExtResource("3_h2yge")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=233090341]
+stream = ExtResource("6_7mycd")
+volume_db = -8.149
+autoplay = true
+parameters/looping = true
+
+[node name="drup" type="AudioStreamPlayer2D" parent="." unique_id=719210854]
+stream = ExtResource("7_4c57u")
+
+[node name="for_asb" type="AudioStreamPlayer2D" parent="." unique_id=377557193]
+stream = ExtResource("8_efxa6")
+
+[node name="for_sub" type="AudioStreamPlayer2D" parent="." unique_id=453155968]
+
+[node name="Audio" type="Node2D" parent="." unique_id=1217518367]
+
+[node name="gugugaga2" type="Sprite2D" parent="." unique_id=1140442644]
+position = Vector2(1333.0839, 947.1241)
+scale = Vector2(0.21181923, 0.20639895)
+texture = ExtResource("7_5vw27")
+
+[node name="gugugaga" type="Sprite2D" parent="." unique_id=616785805]
+position = Vector2(1341.7501, 946.25006)
+scale = Vector2(0.1851705, 0.191259)
+texture = ExtResource("7_272bh")
+flip_h = true
+
+[node name="gameoverplayer" type="AudioStreamPlayer2D" parent="." unique_id=1958163186]
+stream = ExtResource("11_efxa6")
+volume_db = 0.776

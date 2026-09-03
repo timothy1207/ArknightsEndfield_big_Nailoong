@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmaufyly0kumf"
+path="res://.godot/imported/铁痕电台-MSR&Mike Truman&Lottie Truman - 协议流.mp3-cfc092ec094c52df21b87dc4e63e1285.mp3str"
+
+[deps]
+
+source_file="res://sound/铁痕电台-MSR&Mike Truman&Lottie Truman - 协议流.mp3"
+dest_files=["res://.godot/imported/铁痕电台-MSR&Mike Truman&Lottie Truman - 协议流.mp3-cfc092ec094c52df21b87dc4e63e1285.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
